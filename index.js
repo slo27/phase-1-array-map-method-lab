@@ -12,5 +12,15 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(tutorial => {
+    return tutorial.split(' ').map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1)
+    }).join(' ')
+  })
 }
+
+// let stepOne = tutorials.map(tutorial => tutorial.split(' '))
+
+// let stepTwo = stepOne.map(tutorial => tutorial.map(word => word.charAt(0).toUpperCase() + AudioWorkletNode.slice(1)))
+
+// let stepThree = stepTwo.map(tutorialArray => tutorialArray.join(' '))
